@@ -67,9 +67,8 @@ Manager   (owns Document* docs[100], handles all operations)
 
 ---
 
-## Getting Started
 
-### Prerequisites
+
 
 - A C++ compiler supporting **C++11** or later (e.g. `g++`, `clang++`)
 - A terminal / command prompt
@@ -151,11 +150,10 @@ Choice: 6
 
 ## Known Challenges
 
-### Memory management without STL containers
+### Memory management 
 Using a raw array of base-class pointers (`Document* docs[100]`) required manual `new`/`delete` and careful shifting logic on deletion to avoid dangling pointers or memory leaks.
 
-### File persistence with polymorphism
-Saving and reloading polymorphic objects meant writing the type string explicitly so the correct subclass could be reconstructed via the `makeDoc()` factory helper on startup.
+
 
 ### Static member initialization
 Static members (`totalReceived`, `totalSent`) must be defined outside the class body in C++. Forgetting this causes linker errors.
