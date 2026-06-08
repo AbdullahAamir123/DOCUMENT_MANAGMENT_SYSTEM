@@ -64,7 +64,7 @@ int main() {
             break;
 
         } else {
-            cout << "  Invalid choice.\n";
+            cout << "  Invalid Choice.\n";
         }
     }
 
